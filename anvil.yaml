@@ -17,7 +17,7 @@ services:
 startup: {type: form, module: Base}
 package_name: Tutorial
 allow_embedding: false
-name: Clone of Tutorial
+name: E commerce site
 runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox}
 metadata: {title: Tutorial, description: Tutorial}
 startup_form: null
@@ -54,6 +54,9 @@ db_schema:
     - name: purchased_courses
       admin_ui: {width: 200}
       type: simpleObject
+    - name: email_confirmation_key
+      admin_ui: {width: 200}
+      type: string
   courses:
     title: Courses
     client: none
@@ -77,3 +80,4 @@ db_schema:
     - name: id_name
       admin_ui: {width: 200}
       type: string
+renamed: true
