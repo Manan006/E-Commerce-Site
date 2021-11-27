@@ -1,0 +1,79 @@
+dependencies: []
+services:
+- source: /runtime/services/tables.yml
+  client_config: {}
+  server_config: {}
+- source: /runtime/services/anvil/users.yml
+  client_config: {allow_signup: true, enable_automatically: true, use_email: true,
+    confirm_email: true, use_google: true, require_secure_passwords: true, allow_remember_me: true,
+    remember_me_days: 365}
+  server_config: {user_table: users}
+- source: /runtime/services/google.yml
+  client_config: {}
+  server_config: {}
+- source: /runtime/services/stripe.yml
+  client_config: {}
+  server_config: {}
+startup: {type: form, module: Base}
+package_name: Tutorial
+allow_embedding: false
+name: Clone of Tutorial
+runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox}
+metadata: {title: Tutorial, description: Tutorial}
+startup_form: null
+db_schema:
+  users:
+    title: Users
+    client: none
+    server: full
+    columns:
+    - name: email
+      admin_ui: {width: 200}
+      type: string
+    - name: enabled
+      admin_ui: {width: 200}
+      type: bool
+    - name: last_login
+      admin_ui: {width: 200}
+      type: datetime
+    - name: password_hash
+      admin_ui: {width: 200}
+      type: string
+    - name: n_password_failures
+      admin_ui: {width: 200}
+      type: number
+    - name: confirmed_email
+      admin_ui: {width: 200}
+      type: bool
+    - name: remembered_logins
+      admin_ui: {width: 200}
+      type: simpleObject
+    - name: signed_up
+      admin_ui: {width: 200}
+      type: datetime
+    - name: purchased_courses
+      admin_ui: {width: 200}
+      type: simpleObject
+  courses:
+    title: Courses
+    client: none
+    server: full
+    columns:
+    - name: name
+      admin_ui: {width: 200}
+      type: string
+    - name: price
+      admin_ui: {width: 200}
+      type: number
+    - name: created
+      admin_ui: {width: 200}
+      type: datetime
+    - name: description
+      admin_ui: {width: 200}
+      type: string
+    - name: image
+      admin_ui: {width: 200}
+      type: media
+    - name: id_name
+      admin_ui: {width: 200}
+      type: string
