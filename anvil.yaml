@@ -19,7 +19,7 @@ package_name: Tutorial
 allow_embedding: false
 name: E commerce site
 runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox}
-metadata: {title: E commerce site, description: E commerce site}
+metadata: {title: E commerce site, description: E commerce site, logo_img: 'asset:source_code1600.png'}
 startup_form: null
 db_schema:
   users:
