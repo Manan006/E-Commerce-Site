@@ -1,6 +1,4 @@
-dependencies:
-- app_id: sqlite
-  version: {dev: false}
+dependencies: []
 services:
 - source: /runtime/services/tables.yml
   client_config: {}
