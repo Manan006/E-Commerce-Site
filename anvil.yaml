@@ -1,4 +1,6 @@
-dependencies: []
+dependencies:
+- app_id: sqlite
+  version: {dev: false}
 services:
 - source: /runtime/services/tables.yml
   client_config: {}
@@ -15,7 +17,7 @@ services:
   client_config: {}
   server_config: {}
 startup: {type: form, module: Base}
-package_name: Tutorial
+package_name: pycord
 allow_embedding: false
 name: E commerce site
 runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox}

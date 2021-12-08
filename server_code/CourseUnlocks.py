@@ -21,6 +21,5 @@ def get_my_courses():
   for course in user["purchased_courses"]:
     course_info = app_tables.courses.get(id_name=course)
     courses.append(course_info)
-  
   return courses
 
