@@ -5,6 +5,6 @@ components:
 - type: ColumnPanel
   properties: {col_widths: '{}'}
   name: content_panel
-  layout_properties: {grid_position: 'KWGFOY,TPGYVB'}
+  layout_properties: {grid_position: 'NPRAAR,UPCNQS'}
   components: []
 is_package: true

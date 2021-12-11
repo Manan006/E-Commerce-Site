@@ -26,7 +26,7 @@ class MyCourses(MyCoursesTemplate):
       self.no_courses_label.visible = False
     
     course_panel = GridPanel()
-    
+
     for i, course in enumerate(courses):
       c = CourseItem(name=course["name"], button_text="View Content", description=course["description"], image=course["image"], button_callback=self.render_course)
       course_panel.add_component(c, row=str(i//2), width_xs=6)
